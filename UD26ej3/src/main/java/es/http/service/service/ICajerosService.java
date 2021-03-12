@@ -1,0 +1,25 @@
+package es.http.service.service;
+
+import java.util.List;
+
+import es.http.service.dto.Cajeros;
+
+
+
+public interface ICajerosService {
+
+	//Metodos del CRUD
+		public List<Cajeros> listarCajeros(); //Listar All 
+		
+		public Cajeros guardarCajero(Cajeros cajero);	//Guarda un Cajero CREATE
+		
+		public Cajeros cajeroXID(int id); //Leer datos de un Cajero READ
+		
+		public Cajeros actualizarCajero(Cajeros cajero); //Actualiza datos del Cajero UPDATE
+		
+		public void eliminarCajero(int id);// Elimina el Cajero DELETE
+	
+
+}
+
+
