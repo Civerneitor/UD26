@@ -23,6 +23,7 @@ public class Cajeros {
 
 	//Atributos de entidad curso
 	@Id
+	@Column(name="codigo")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//busca ultimo valor e incrementa desde id final de db
 	private int codigo;
 	@Column(name = "nom_apels")//no hace falta si se llama igual //si falla cambiar '_a' por 'A'

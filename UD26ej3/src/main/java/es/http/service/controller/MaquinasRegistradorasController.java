@@ -35,7 +35,7 @@ public class MaquinasRegistradorasController {
 	}
 	
 	
-	@GetMapping("/maquinasRegistradoras/{id}")
+	@GetMapping("/maquinasRegistradoras/{codigo}")
 	public MaquinasRegistradoras MaquinasRegistradoraXID(@PathVariable(name="codigo") int id) {
 		
 		MaquinasRegistradoras MaquinasRegistradora_xid= new MaquinasRegistradoras();
@@ -47,7 +47,7 @@ public class MaquinasRegistradorasController {
 		return MaquinasRegistradora_xid;
 	}
 	
-	@PutMapping("/maquinasRegistradoras/{id}")
+	@PutMapping("/maquinasRegistradoras/{codigo}")
 	public MaquinasRegistradoras actualizarMaquinasRegistradora(@PathVariable(name="codigo")int id,@RequestBody MaquinasRegistradoras MaquinasRegistradora) {
 		
 		MaquinasRegistradoras MaquinasRegistradora_seleccionado= new MaquinasRegistradoras();
@@ -66,7 +66,7 @@ public class MaquinasRegistradorasController {
 		return MaquinasRegistradora_actualizado;
 	}
 	
-	@DeleteMapping("/maquinasRegistradoras/{id}")
+	@DeleteMapping("/maquinasRegistradoras/{codigo}")
 	public void eleiminarMaquinasRegistradora(@PathVariable(name="codigo")int id) {
 		maquinasRegistradoraServiceImpl.eliminarMaquinaRegistradora(id);
 	}

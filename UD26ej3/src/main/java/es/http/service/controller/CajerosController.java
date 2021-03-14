@@ -35,8 +35,8 @@ public class CajerosController {
 	}
 	
 	
-	@GetMapping("/cajeros/{id}")
-	public Cajeros cajeroXID(@PathVariable(name="id") int id) {
+	@GetMapping("/cajeros/{codigo}")
+	public Cajeros cajeroXID(@PathVariable(name="codigo") int id) {
 		
 		Cajeros Cajero_xid= new Cajeros();
 		
@@ -47,8 +47,8 @@ public class CajerosController {
 		return Cajero_xid;
 	}
 	
-	@PutMapping("/cajeros/{id}")
-	public Cajeros actualizarCajero(@PathVariable(name="id")int id,@RequestBody Cajeros cajero) {
+	@PutMapping("/cajeros/{codigo}")
+	public Cajeros actualizarCajero(@PathVariable(name="codigo")int id,@RequestBody Cajeros cajero) {
 		
 		Cajeros Cajero_seleccionado= new Cajeros();
 		Cajeros Cajero_actualizado= new Cajeros();
@@ -65,8 +65,8 @@ public class CajerosController {
 		return Cajero_actualizado;
 	}
 	
-	@DeleteMapping("/cajeros/{id}")
-	public void eliminarCajero(@PathVariable(name="id")int id) {
+	@DeleteMapping("/cajeros/{codigo}")
+	public void eliminarCajero(@PathVariable(name="codigo")int id) {
 		cajeroServiceImpl.eliminarCajero(id);
 	}
 	

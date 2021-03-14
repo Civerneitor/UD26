@@ -35,8 +35,8 @@ public class ProductosController {
 	}
 	
 	
-	@GetMapping("/productos/{id}")
-	public Productos ProductoXID(@PathVariable(name="id") int id) {
+	@GetMapping("/productos/{codigo}")
+	public Productos ProductoXID(@PathVariable(name="codigo") int id) {
 		
 		Productos Producto_xid= new Productos();
 		
@@ -47,8 +47,8 @@ public class ProductosController {
 		return Producto_xid;
 	}
 	
-	@PutMapping("/producto/{id}")
-	public Productos actualizarProducto(@PathVariable(name="id")int id,@RequestBody Productos Producto) {
+	@PutMapping("/producto/{codigo}")
+	public Productos actualizarProducto(@PathVariable(name="codigo")int id,@RequestBody Productos Producto) {
 		
 		Productos Producto_seleccionado= new Productos();
 		Productos Producto_actualizado= new Productos();
@@ -65,8 +65,8 @@ public class ProductosController {
 		return Producto_actualizado;
 	}
 	
-	@DeleteMapping("/producto/{id}")
-	public void eliminarProducto(@PathVariable(name="id")int id) {
+	@DeleteMapping("/producto/{codigo}")
+	public void eliminarProducto(@PathVariable(name="codigo")int id) {
 		productoServiceImpl.eliminarProducto(id);
 	}
 	
